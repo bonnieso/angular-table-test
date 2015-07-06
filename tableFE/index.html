@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="heimdall">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heimdall</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+  </head>
+  <body ng-controller="MainCtrl">
+    <table ng-repeat="d in dataDisplay" class="table">
+        <tr>
+          <th>Feature/Engine</th>
+          <th>FF1</th>
+          <th>FF2</th>
+          <th>IE1</th>
+          <th>IE2</th>
+          <th>IE3</th>
+          <th>WK1</th>
+          <th>WK2</th>
+          <th>WK3</th>
+          <th>WK4</th>
+          <th>iOS1</th>
+          <th>iOS2</th>
+        </tr>
+        <tr ng-repeat="(key, value) in d">
+          <td ng-mouseenter="coloring()" ng-mouseleave="uncoloring()" class="ng-class: highlight()">{{value.Engine}}</td>
+          <td class="cell ng-class: getColor()">{{value.FF1}}</td>
+          <td class="cell ng-class: getColor()">{{value.FF2}}</td>
+          <td class="cell ng-class: getColor()">{{value.IE1}}</td>
+          <td class="cell ng-class: getColor()">{{value.IE2}}</td>
+          <td class="cell ng-class: getColor()">{{value.IE3}}</td>
+          <td class="cell ng-class: getColor()">{{value.WK1}}</td>
+          <td class="cell ng-class: getColor()">{{value.WK2}}</td>
+          <td class="cell ng-class: getColor()">{{value.WK3}}</td>
+          <td class="cell ng-class: getColor()">{{value.WK4}}</td>
+          <td class="cell ng-class: getColor()">{{value.iOS1}}</td>
+          <td class="cell ng-class: getColor()">{{value.iOS2}}</td>
+        </tr>        
+       </table>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="    https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js
+                 "></script>
+    <script src="script.js"></script>
+  </body>
+</html>
